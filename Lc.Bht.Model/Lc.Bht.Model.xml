@@ -1,0 +1,3523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lc.Bht.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Lc.Bht.Model.Api.ApiResult">
+            <summary>
+            统一接口返回
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.ApiResult.Code">
+            <summary>
+            请求状态
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.ApiResult.Message">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.ApiResult.Timestamp">
+            <summary>
+            返回时间戳
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.ApiResult`1.Data">
+            <summary>
+            接口返回值
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Api.PagedInfo`1">
+            <summary>
+            分页组件实体类
+            </summary>
+            <typeparam name="T">泛型实体</typeparam>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.PageIndex">
+            <summary>
+            分页索引
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.TotalCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.TotalPages">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.HasPreviousPage">
+            <summary>
+            是否有上一页
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PagedInfo`1.HasNextPage">
+            <summary>
+            是否有下一页
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PageParm.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PageParm.PageSize">
+            <summary>
+            每页总条数
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PageParm.OrderBy">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Api.PageParm.Sort">
+            <summary>
+            排序方式
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.GetCodeDto">
+            <summary>
+            获取验证码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.GetCodeDto.captchaCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.GetCodeDto.captchaGUID">
+            <summary>
+            验证码id
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.LoginDto">
+            <summary>
+            登录参数
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LoginDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LoginDto.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LoginDto.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LoginDto.Uuid">
+            <summary>
+            验证码uid
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.LogsQueryDto">
+            <summary>
+            查询日志
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LogsQueryDto.BeginDate">
+            <summary>
+            描述 : 开始时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LogsQueryDto.EndDate">
+            <summary>
+            描述 : 结束时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LogsQueryDto.Level">
+            <summary>
+            描述 : 日志等级 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.LogsQueryDto.QueryText">
+            <summary>
+            描述 : 查询字符串 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.MenusQueryDto">
+            <summary>
+            查询菜单
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusQueryDto.Name">
+            <summary>
+            描述 : 菜单名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.MenusCreateDto">
+            <summary>
+            添加菜单
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Type">
+            <summary>
+            描述 : 菜单类型 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Name">
+            <summary>
+            描述 : 菜单名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Icon">
+            <summary>
+            描述 : 图标 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Path">
+            <summary>
+            描述 : 路由地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Component">
+            <summary>
+            描述 : 组件路径 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.SortIndex">
+            <summary>
+            描述 : 默认排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.ViewPower">
+            <summary>
+            描述 : 浏览权限 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.ParentUID">
+            <summary>
+            描述 : 上级菜单 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.Hidden">
+            <summary>
+            描述 : 是否可见 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.System">
+            <summary>
+            描述 : 可用系统(0-PC，1-Wx) 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.isFrame">
+            <summary>
+            描述 : 是否外链 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusCreateDto.KeepAlive">
+            <summary>
+            描述 : 是否缓存 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.MenusUpdateDto">
+            <summary>
+            更新菜单
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Name">
+            <summary>
+            描述 : 菜单名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Type">
+            <summary>
+            描述 : 菜单类型 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Icon">
+            <summary>
+            描述 : 图标 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Path">
+            <summary>
+            描述 : 路由地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Component">
+            <summary>
+            描述 : 组件路径 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.SortIndex">
+            <summary>
+            描述 : 默认排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.ViewPower">
+            <summary>
+            描述 : 浏览权限 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.ParentUID">
+            <summary>
+            描述 : 上级菜单 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.Hidden">
+            <summary>
+            描述 : 是否可见 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.System">
+            <summary>
+            描述 : 可用系统(0-PC，1-Wx) 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.isFrame">
+            <summary>
+            描述 : 是否外链 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.MenusUpdateDto.KeepAlive">
+            <summary>
+            描述 : 是否缓存 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.OptionsQueryDto">
+            <summary>
+            查询字典定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsQueryDto.QueryText">
+            <summary>
+            描述 : 查询字符串 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.OptionsCreateDto">
+            <summary>
+            新增字典定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsCreateDto.Option">
+            <summary>
+            描述 : 分组（System_Menus_Status） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Lc.Bht.Model.Dto.System.OptionsCreateDto.Label" -->
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsCreateDto.Value">
+            <summary>
+            描述 : 内容 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsCreateDto.SortIndex">
+            <summary>
+            描述 : 排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsCreateDto.Remark">
+            <summary>
+            描述 : 描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.OptionsUpdateDto">
+            <summary>
+            更新字典定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.Option">
+            <summary>
+            描述 : 分组（System_Menus_Status） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.Label">
+            <summary>
+            描述 : 名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.Value">
+            <summary>
+            描述 : 内容 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.SortIndex">
+            <summary>
+            描述 : 排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.OptionsUpdateDto.Remark">
+            <summary>
+            描述 : 描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.PowersQueryDto">
+            <summary>
+            查询权限定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersQueryDto.Name">
+            <summary>
+            描述 : 权限定义 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.PowersCreateDto">
+            <summary>
+            添加权限标识
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersCreateDto.Name">
+            <summary>
+            描述 : 权限标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Lc.Bht.Model.Dto.System.PowersCreateDto.Page" -->
+        <member name="P:Lc.Bht.Model.Dto.System.PowersCreateDto.Description">
+            <summary>
+            描述 : 权限描述 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersCreateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.PowersUpdateDto">
+            <summary>
+            更新权限标识
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersUpdateDto.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersUpdateDto.Name">
+            <summary>
+            描述 : 权限标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersUpdateDto.Page">
+            <summary>
+            描述 : 系统页面 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersUpdateDto.Description">
+            <summary>
+            描述 : 权限描述 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.PowersUpdateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolePowersUpdateDto.RoleId">
+            <summary>
+            描述 : 角色id 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolePowersUpdateDto.PowerIds">
+            <summary>
+            描述 : 权限编码 [1,2,3,4] 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.RolesQueryDto">
+            <summary>
+            查询角色定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesQueryDto.Name">
+            <summary>
+            描述 : 角色定义 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.RolesCreateDto">
+            <summary>
+            添加角色定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesCreateDto.Name">
+            <summary>
+            描述 : 角色定义 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesCreateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.RolesUpdateDto">
+            <summary>
+            更新角色定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesUpdateDto.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesUpdateDto.Name">
+            <summary>
+            描述 : 角色定义 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RolesUpdateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.RoleUsersCreateDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RoleUsersCreateDto.RoleId">
+            <summary>
+            描述 : 角色id 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RoleUsersCreateDto.UserIds">
+            <summary>
+            描述 : 用户编码 [1,2,3,4] 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.RoleUsersDeleteDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RoleUsersDeleteDto.RoleId">
+            <summary>
+            描述 : 角色id 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.RoleUsersDeleteDto.UserIds">
+            <summary>
+            描述 : 权限编码 [1,2,3,4] 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.TasksQueryDto">
+            <summary>
+            查询任务列表
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksQueryDto.QueryText">
+            <summary>
+            描述 : 查询字符串 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.TasksCreateDto">
+            <summary>
+            添加任务
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.Name">
+            <summary>
+            描述 : 任务名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.JobGroup">
+            <summary>
+            描述 : 任务分组 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.Cron">
+            <summary>
+            描述 : 运行时间表达式 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.AssemblyName">
+            <summary>
+            描述 : 程序集名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.ClassName">
+            <summary>
+            描述 : 任务所在类 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.Remark">
+            <summary>
+            描述 : 任务描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.BeginTime">
+            <summary>
+            描述 : 开始时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.EndTime">
+            <summary>
+            描述 : 结束时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.TriggerType">
+            <summary>
+            描述 : 触发器类型（0、simple 1、cron） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.IntervalSecond">
+            <summary>
+            描述 : 执行间隔时间(单位:秒) 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksCreateDto.JobParams">
+            <summary>
+            描述 : 传入参数 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.TasksUpdateDto">
+            <summary>
+            更新任务
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.ID">
+            <summary>
+            描述 : UID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.Name">
+            <summary>
+            描述 : 任务名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.JobGroup">
+            <summary>
+            描述 : 任务分组 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.Cron">
+            <summary>
+            描述 : 运行时间表达式 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.AssemblyName">
+            <summary>
+            描述 : 程序集名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.ClassName">
+            <summary>
+            描述 : 任务所在类 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.Remark">
+            <summary>
+            描述 : 任务描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.BeginTime">
+            <summary>
+            描述 : 开始时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.EndTime">
+            <summary>
+            描述 : 结束时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.TriggerType">
+            <summary>
+            描述 : 触发器类型（0、simple 1、cron） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.IntervalSecond">
+            <summary>
+            描述 : 执行间隔时间(单位:秒) 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.TasksUpdateDto.JobParams">
+            <summary>
+            描述 : 传入参数 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UserCenterUpdateDto">
+            <summary>
+            更新用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.NickName">
+            <summary>
+            描述 : 用户昵称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.Email">
+            <summary>
+            描述 : 邮箱 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.Sex">
+            <summary>
+            描述 : 性别 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.QQ">
+            <summary>
+            描述 : QQ 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.Phone">
+            <summary>
+            描述 : 手机号码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdateDto.Birthday">
+            <summary>
+            描述 : 生日 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdatePasswordDto.CurrentPassword">
+            <summary>
+            描述 : 旧密码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UserCenterUpdatePasswordDto.ConfirmPassword">
+            <summary>
+            描述 : 新密码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UsersQueryDto">
+            <summary>
+            查询用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersQueryDto.QueryText">
+            <summary>
+            描述 : 查询字符串 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UsersCreateDto">
+            <summary>
+            添加用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.UserID">
+            <summary>
+            描述 : 用户账号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.UserName">
+            <summary>
+            描述 : 用户名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.NickName">
+            <summary>
+            描述 : 用户昵称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Email">
+            <summary>
+            描述 : 邮箱 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Password">
+            <summary>
+            描述 : 密码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Sex">
+            <summary>
+            描述 : 性别 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.AvatarUrl">
+            <summary>
+            描述 : 头像地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.QQ">
+            <summary>
+            描述 : QQ 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Phone">
+            <summary>
+            描述 : 手机号码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.ProvinceID">
+            <summary>
+            描述 : 用户所在省份编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Province">
+            <summary>
+            描述 : 用户所在省份 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.CityID">
+            <summary>
+            描述 : 用户所在城市编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.City">
+            <summary>
+            描述 : 用户所在城市 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.CountyID">
+            <summary>
+            描述 : 用户所在县/区编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.County">
+            <summary>
+            描述 : 用户所在县/区 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Address">
+            <summary>
+            描述 : 地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.IdentityCard">
+            <summary>
+            描述 : 身份证 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Birthday">
+            <summary>
+            描述 : 生日 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.Enabled">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : 1
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersCreateDto.OneSession">
+            <summary>
+            描述 : 单用户模式 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UsersUpdateDto">
+            <summary>
+            更新用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.UserID">
+            <summary>
+            描述 : 用户账号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.UserName">
+            <summary>
+            描述 : 用户名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.NickName">
+            <summary>
+            描述 : 用户昵称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Email">
+            <summary>
+            描述 : 邮箱 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Sex">
+            <summary>
+            描述 : 性别 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.AvatarUrl">
+            <summary>
+            描述 : 头像地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.QQ">
+            <summary>
+            描述 : QQ 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Phone">
+            <summary>
+            描述 : 手机号码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.ProvinceID">
+            <summary>
+            描述 : 用户所在省份编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Province">
+            <summary>
+            描述 : 用户所在省份 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.CityID">
+            <summary>
+            描述 : 用户所在城市编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.City">
+            <summary>
+            描述 : 用户所在城市 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.CountyID">
+            <summary>
+            描述 : 用户所在县/区编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.County">
+            <summary>
+            描述 : 用户所在县/区 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Address">
+            <summary>
+            描述 : 地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.IdentityCard">
+            <summary>
+            描述 : 身份证 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Birthday">
+            <summary>
+            描述 : 生日 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.Enabled">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : 1
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersUpdateDto.OneSession">
+            <summary>
+            描述 : 单用户模式 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UsersDeleteDto">
+            <summary>
+            删除用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersDeleteDto.UserIds">
+            <summary>
+            描述 : 删除用户数组 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.System.UsersEnableDto">
+            <summary>
+            启用禁用用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersEnableDto.UserIds">
+            <summary>
+            描述 : 启用禁用用户
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersEnableDto.Status">
+            <summary>
+            描述 : 禁用/启用
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersResetPasswordDto.UserID">
+            <summary>
+            描述 : 用户账号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.System.UsersResetPasswordDto.ConfirmPassword">
+            <summary>
+            描述 : 新密码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto">
+            <summary>
+            主板上料第一次调mes接口入参
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.op_flag">
+            <summary>
+            操作码(B01)
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.device_sn">
+            <summary>
+            设备SN(plc)
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.work_sn">
+            <summary>
+            工位sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.emp_no">
+            <summary>
+            操作员工号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.pro_sn">
+            <summary>
+            pcb板sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.box_sn">
+            <summary>
+            备用
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.con_sn">
+            <summary>
+            备用
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.mo_num">
+            <summary>
+            备用
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.Mac.img_path">
+            <summary>
+            相对路径
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.Mac.mac_sn">
+            <summary>
+            mac条码
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseCompany">
+            <summary>
+            公司定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.CompanyNo">
+            <summary>
+            描述 : 公司编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.CompanyName">
+            <summary>
+            描述 : 公司名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseCompany.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseEquipment">
+            <summary>
+            设备定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.ID">
+            <summary>
+            描述 : UID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.EquipNo">
+            <summary>
+            描述 : 设备编号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.EquipName">
+            <summary>
+            描述 : 设备名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseEquipment.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseFactory">
+            <summary>
+            工厂定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.FactoryNo">
+            <summary>
+            描述 : 工厂编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.FactoryName">
+            <summary>
+            描述 : 工厂名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseFactory.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseProductline">
+            <summary>
+            产线定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.LineNo">
+            <summary>
+            描述 : 生产线编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.LineName">
+            <summary>
+            描述 : 生产线名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductline.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseProductprocess">
+            <summary>
+            工序定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.ProcessNo">
+            <summary>
+            描述 : 工序编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.ProcessName">
+            <summary>
+            描述 : 工序名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseProductprocess.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.BaseWorkshop">
+            <summary>
+            车间定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.WorkShopNo">
+            <summary>
+            描述 : 车间编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.WorkShopName">
+            <summary>
+            描述 : 车间名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.Enable">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.BaseWorkshop.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PcbRackBackInput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.id">
+            <summary>
+            描述 : id唯一标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.op_flag">
+            <summary>
+            描述 : 操作码(B02) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.device_sn">
+            <summary>
+            描述 : 设备条码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.work_sn">
+            <summary>
+            描述 : 工位SN 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.emp_no">
+            <summary>
+            描述 : 操作员工号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.pro_sn">
+            <summary>
+            描述 : PCB板SN 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.box_sn">
+            <summary>
+            描述 : 备用 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.con_sn">
+            <summary>
+            描述 : 载具SN  
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.mo_num">
+            <summary>
+            描述 : 制令单号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.mac_sn">
+            <summary>
+            描述 : MAC条码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.rhythm">
+            <summary>
+            描述 : 节拍（MS） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.img_path">
+            <summary>
+            描述 : 相对路径, 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackInput.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PcbRackBackOutput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.id">
+            <summary>
+            描述 : id唯一标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.result_flag">
+            <summary>
+            描述 : OK/NG 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.flow_code">
+            <summary>
+            描述 : 流程码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.next_stop">
+            <summary>
+            描述 : 下一站工作点 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.result_message">
+            <summary>
+            描述 : 结果信息 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.mo_num">
+            <summary>
+            描述 : 制令单号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.wo_num">
+            <summary>
+            描述 : 工单号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackBackOutput.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PcbRackInput">
+            <summary>
+            pcb上料，参数
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.id">
+            <summary>
+            描述 : ID唯一标识 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.op_flag">
+            <summary>
+            描述 : 操作码(B01) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.device_sn">
+            <summary>
+            描述 : 设备SN(plc) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.work_sn">
+            <summary>
+            描述 : 工位SN 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.emp_no">
+            <summary>
+            描述 : 操作员工号（待定） 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.pro_sn">
+            <summary>
+            描述 : PCB板SN 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.box_sn">
+            <summary>
+            描述 : 备用 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.con_sn">
+            <summary>
+            描述 : 备用 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.mo_num">
+            <summary>
+            描述 : 备用 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackInput.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PcbRackOutput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.id">
+            <summary>
+            描述 : ID唯一标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.result_flag">
+            <summary>
+            描述 : OK/NG 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.flow_code">
+            <summary>
+            描述 : 流程码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.next_stop">
+            <summary>
+            描述 : 下一站工作点 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.result_message">
+            <summary>
+            描述 : 结果信息 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.mo_num">
+            <summary>
+            描述 : 制令单号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.wo_num">
+            <summary>
+            描述 : 工单号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.mboard_code">
+            <summary>
+            描述 : 主板料号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PcbRackOutput.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysDatarelation">
+            <summary>
+            数据关系
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysDatarelation.ID">
+            <summary>
+            描述 : UID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysDatarelation.Form">
+            <summary>
+            描述 : 来源ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysDatarelation.To">
+            <summary>
+            描述 : 对应ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysDatarelation.Type">
+            <summary>
+            描述 :  
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysLogs">
+            <summary>
+            日志管理
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.ID">
+            <summary>
+            描述 : ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Logger">
+            <summary>
+            描述 : 日志类型 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Level">
+            <summary>
+            描述 : 日志等级 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Url">
+            <summary>
+            描述 : 日志来源 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Host">
+            <summary>
+            描述 : 主机地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Method">
+            <summary>
+            描述 : 请求方式 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.UserAgent">
+            <summary>
+            描述 : 浏览器标识 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Cookie">
+            <summary>
+            描述 : Cookie 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.QueryString">
+            <summary>
+            描述 : URL参数 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Body">
+            <summary>
+            描述 : 请求内容 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Message">
+            <summary>
+            描述 : 日志信息 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.Elapsed">
+            <summary>
+            描述 : 请求耗时 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysLogs.IPAddress">
+            <summary>
+            描述 : 用户来源 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysMenu">
+            <summary>
+            系统菜单
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Type">
+            <summary>
+            描述 : 菜单类型 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Name">
+            <summary>
+            描述 : 菜单名称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Icon">
+            <summary>
+            描述 : 图标 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Path">
+            <summary>
+            描述 : 路由地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Component">
+            <summary>
+            描述 : 组件路径 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.SortIndex">
+            <summary>
+            描述 : 默认排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.ViewPower">
+            <summary>
+            描述 : 浏览权限 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.ParentUID">
+            <summary>
+            描述 : 上级菜单 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.System">
+            <summary>
+            描述 : 可用系统(0-PC，1-Wx) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.isFrame">
+            <summary>
+            描述 : 是否外链 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.Hidden">
+            <summary>
+            描述 : 是否可见 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.KeepAlive">
+            <summary>
+            描述 : 是否缓存 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysMenu.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysOnline">
+            <summary>
+            在线用户
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.UserID">
+            <summary>
+            描述 : 用户 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.SessionID">
+            <summary>
+            描述 : 会话 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.IPAddress">
+            <summary>
+            描述 : IP地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.LoginTime">
+            <summary>
+            描述 : 登录时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.UpdateTime">
+            <summary>
+            描述 : 最后操作时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOnline.Source">
+            <summary>
+            描述 : 来源 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysOptions">
+            <summary>
+            选项框字典
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.Option">
+            <summary>
+            描述 : 分组（System_Menus_Status） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.Label">
+            <summary>
+            描述 : 名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.Value">
+            <summary>
+            描述 : 内容 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.SortIndex">
+            <summary>
+            描述 : 排序 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.Remark">
+            <summary>
+            描述 : 描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysOptions.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysPower">
+            <summary>
+            权限定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.Name">
+            <summary>
+            描述 : 权限标识 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.Page">
+            <summary>
+            描述 : 系统页面 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.Description">
+            <summary>
+            描述 : 权限描述 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysPower.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysRole">
+            <summary>
+            角色定义
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.ID">
+            <summary>
+            描述 : ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.Name">
+            <summary>
+            描述 : 角色名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRole.Administrator">
+            <summary>
+            描述 : 超级管理员可见 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysRolepower">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRolepower.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRolepower.RoleUID">
+            <summary>
+            描述 : 角色ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysRolepower.PowerUID">
+            <summary>
+            描述 : 权限ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysTasksqz">
+            <summary>
+            计划任务
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.ID">
+            <summary>
+            描述 : UID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.Name">
+            <summary>
+            描述 : 任务名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.JobGroup">
+            <summary>
+            描述 : 任务分组 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.Cron">
+            <summary>
+            描述 : 运行时间表达式 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.AssemblyName">
+            <summary>
+            描述 : 程序集名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.ClassName">
+            <summary>
+            描述 : 任务所在类 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.Remark">
+            <summary>
+            描述 : 任务描述 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.RunTimes">
+            <summary>
+            描述 : 执行次数 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.BeginTime">
+            <summary>
+            描述 : 开始时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.EndTime">
+            <summary>
+            描述 : 结束时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.TriggerType">
+            <summary>
+            描述 : 触发器类型（0、simple 1、cron） 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.IntervalSecond">
+            <summary>
+            描述 : 执行间隔时间(单位:秒) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.IsStart">
+            <summary>
+            描述 : 是否启动 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.JobParams">
+            <summary>
+            描述 : 传入参数 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysTasksqz.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysUserrelation">
+            <summary>
+            用户权限
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrelation.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrelation.UserID">
+            <summary>
+            描述 : 用户ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrelation.ObjectID">
+            <summary>
+            描述 : 数据权限ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrelation.ObjectType">
+            <summary>
+            描述 : 数据权限类型 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysUserrole">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrole.ID">
+            <summary>
+            描述 : UUID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrole.UserID">
+            <summary>
+            描述 : 用户ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUserrole.RoleID">
+            <summary>
+            描述 : 角色ID 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.SysUsers">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.UserID">
+            <summary>
+            描述 : 用户账号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.UserName">
+            <summary>
+            描述 : 用户名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.NickName">
+            <summary>
+            描述 : 用户昵称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Email">
+            <summary>
+            描述 : 邮箱 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Password">
+            <summary>
+            描述 : 密码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Sex">
+            <summary>
+            描述 : 性别 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.AvatarUrl">
+            <summary>
+            描述 : 头像地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.QQ">
+            <summary>
+            描述 : QQ 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Phone">
+            <summary>
+            描述 : 手机号码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.ProvinceID">
+            <summary>
+            描述 : 用户所在省份编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Province">
+            <summary>
+            描述 : 用户所在省份 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.CityID">
+            <summary>
+            描述 : 用户所在城市编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.City">
+            <summary>
+            描述 : 用户所在城市 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.CountyID">
+            <summary>
+            描述 : 用户所在县/区编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.County">
+            <summary>
+            描述 : 用户所在县/区 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Address">
+            <summary>
+            描述 : 地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.IdentityCard">
+            <summary>
+            描述 : 身份证 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Birthday">
+            <summary>
+            描述 : 生日 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.LastLoginTime">
+            <summary>
+            描述 : 上次登录时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Enabled">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : b'1'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.OneSession">
+            <summary>
+            描述 : 单用户模式 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.UpdateTime">
+            <summary>
+            描述 : 最后更新时间 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.CreateID">
+            <summary>
+            描述 : 创建人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.CreateName">
+            <summary>
+            描述 : 创建人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.UpdateID">
+            <summary>
+            描述 : 更新人编码 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.UpdateName">
+            <summary>
+            描述 : 更新人 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.SysUsers.Administrator">
+            <summary>
+            描述 : 超级管理员 
+            空值 : False
+            默认 : b'0'
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.TestCap01">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.TestCap01.ID">
+            <summary>
+            描述 :  
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.TestCap02">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.TestCap02.ID">
+            <summary>
+            描述 :  
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.EnumExtension">
+            <summary>
+            枚举扩展属性
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Model.EnumExtension.GetEnumText(System.Enum)">
+            <summary>
+            获得枚举提示文本
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Lc.Bht.Model.SourceType.Web">
+            <summary>
+            后台程序
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.SourceType.MiniProgram">
+            <summary>
+            微信小程序
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.SourceType.Perk">
+            <summary>
+            福利小程序
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.UserRelationType">
+            <summary>
+            用户权限类型
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.UserRelationType.Company">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.UserRelationType.Factory">
+            <summary>
+            工厂
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.UserRelationType.WorkShop">
+            <summary>
+            车间
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.UserRelationType.ProductLine">
+            <summary>
+            生产线
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.UserRelationType.ProductProcess">
+            <summary>
+            工序
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.DataRelationType">
+            <summary>
+            对应关系
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.DataRelationType.Factory_To_Company">
+            <summary>
+            工厂与公司对应关系
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.DataRelationType.WorkShop_To_Factory">
+            <summary>
+            车间与工厂对应关系
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.DataRelationType.Process_To_WorkShop">
+            <summary>
+            工序与车间对应关系
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.DataRelationType.Line_To_Process">
+            <summary>
+            产线与工序对应关系
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.DataRelationType.Equipment_To_Line">
+            <summary>
+            设备与生产线对应关系
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.OrderPrefixType">
+            <summary>
+            单据类型
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.OrderPrefixType.BG">
+            <summary>
+            报工单据
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.View.System.UserMenusVM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.alwaysShow">
+            <summary>
+            始终显示
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.name">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.path">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.hidden">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.redirect">
+            <summary>
+            是否外链
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.component">
+            <summary>
+            组件路径
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.UserMenusVM.meta">
+            <summary>
+            菜单信息
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Model.View.System.UserMenusVM.children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.View.System.MenuMetaVM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.MenuMetaVM.title">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.MenuMetaVM.icon">
+            <summary>
+            系统图标
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.MenuMetaVM.path">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.MenuMetaVM.keepAlive">
+            <summary>
+            是否缓存
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.View.System.MenuListVM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.System.MenuListVM.Children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.UserID">
+            <summary>
+            描述 : 用户账号 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.UserName">
+            <summary>
+            描述 : 用户名称 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.NickName">
+            <summary>
+            描述 : 用户昵称 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Email">
+            <summary>
+            描述 : 邮箱 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Sex">
+            <summary>
+            描述 : 性别 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.AvatarUrl">
+            <summary>
+            描述 : 照片 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.QQ">
+            <summary>
+            描述 : QQ 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Phone">
+            <summary>
+            描述 : 手机号码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.ProvinceID">
+            <summary>
+            描述 : 用户所在省份编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Province">
+            <summary>
+            描述 : 用户所在省份 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.CityID">
+            <summary>
+            描述 : 用户所在城市编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.City">
+            <summary>
+            描述 : 用户所在城市 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.CountyID">
+            <summary>
+            描述 : 用户所在县/区编码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.County">
+            <summary>
+            描述 : 用户所在县/区 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Address">
+            <summary>
+            描述 : 地址 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Remark">
+            <summary>
+            描述 : 备注 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.IdentityCard">
+            <summary>
+            描述 : 身份证 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Birthday">
+            <summary>
+            描述 : 生日 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.CreateTime">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Enabled">
+            <summary>
+            描述 : 是否启用 
+            空值 : False
+            默认 : 1
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.OneSession">
+            <summary>
+            描述 : 单用户模式 
+            空值 : False
+            默认 : 0
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Source">
+            <summary>
+            描述 : 来源   
+            空值 : False    
+            默认 :   
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.KeepHours">
+            <summary>
+            描述 : 持续时间   
+            空值 : False    
+            默认 :   
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.Administrator">
+            <summary>
+            描述 : 超级管理员   
+            空值 : False    
+            默认 :   
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.UserPower">
+            <summary>
+            描述 : 系统权限   
+            空值 : False    
+            默认 :   
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UserSessionVM.UserRelation">
+            <summary>
+            描述 : 数据权限   
+            空值 : False    
+            默认 :   
+            </summary>
+        </member>
+    </members>
+</doc>

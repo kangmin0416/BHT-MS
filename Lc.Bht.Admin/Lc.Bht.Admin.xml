@@ -1,0 +1,865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lc.Bht.Admin</name>
+    </assembly>
+    <members>
+        <member name="T:Lc.Bht.Admin.Authorization.AuthorizationAttribute">
+            <summary>
+            登录验证过滤器
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Authorization.UseJwtMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Lc.Bht.Admin.Extensions.TokenManager)">
+             <summary>
+            
+             </summary>
+             <param name="next"></param>
+             <param name="jwtSetting"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Authorization.UseJwtMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            验证授权
+            </summary>
+            <param name="context"></param>
+            <param name="IRedisCacheService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Authorization.UseJwtMiddleware.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Authorization.UseJwtMiddlewareExtensions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Authorization.UseJwtMiddlewareExtensions.UseJwt(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            权限检查
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.BaseController.toResponse(Lc.Bht.Model.StatusCodeType)">
+            <summary>
+            返回封装
+            </summary>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.BaseController.toResponse(Lc.Bht.Model.StatusCodeType,System.String)">
+            <summary>
+            返回封装
+            </summary>
+            <param name="statusCode"></param>
+            <param name="retMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.BaseController.toResponse``1(``0)">
+            <summary>
+            返回封装
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.BaseController.ResolveUserMenuTree(System.Collections.Generic.List{Lc.Bht.Model.SysMenu},System.String)">
+            <summary>
+            生成 Vue Router
+            </summary>
+            <param name="menus"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.BaseController.ResolveMenuTree(System.Collections.Generic.List{Lc.Bht.Model.SysMenu},System.String)">
+            <summary>
+            生成系统菜单树
+            </summary>
+            <param name="menus"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.AuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.AuthController._TokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.AuthController._ISysUsersService">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.Code">
+            <summary>
+            获取验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.Login(Lc.Bht.Model.Dto.System.LoginDto)">
+            <summary>
+            后台用户登录
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.GetUserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.LogOut">
+            <summary>
+            用户退出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.LogsController">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.LogsController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.LogsController._logsService">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.LogsController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Lc.Bht.Interfaces.ISysLogsService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="logsService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.LogsController.Query(Lc.Bht.Model.Dto.System.LogsQueryDto)">
+            <summary>
+            查询日志列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.MenusController">
+            <summary>
+            菜单管理
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.MenusController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.MenusController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.MenusController._menuService">
+            <summary>
+            菜单接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.MenusController._ISysUsersService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.#ctor(Lc.Bht.Interfaces.IUnitOfWork,Lc.Bht.Admin.Extensions.TokenManager,Lc.Bht.Interfaces.ISysMenuService,Lc.Bht.Interfaces.ISysUsersService,Microsoft.Extensions.Logging.ILogger{Lc.Bht.Admin.Controllers.System.MenusController})">
+            <summary>
+            
+            </summary>
+            <param name="unitOfWork"></param>
+            <param name="tokenManager"></param>
+            <param name="menuService"></param>
+            <param name="ISysUsersService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.GetUserMenus">
+            <summary>
+            获取用户菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.Query(Lc.Bht.Model.Dto.System.MenusQueryDto)">
+            <summary>
+            查询菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.Get(System.String)">
+            <summary>
+            查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.Create(Lc.Bht.Model.Dto.System.MenusCreateDto)">
+            <summary>
+            添加菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.Update(Lc.Bht.Model.Dto.System.MenusUpdateDto)">
+            <summary>
+            更新菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.MenusController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.OptionsController">
+            <summary>
+            字典定义
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.OptionsController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.OptionsController._optionService">
+            <summary>
+            字典定义接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.Query(Lc.Bht.Model.Dto.System.OptionsQueryDto)">
+            <summary>
+            查询字典定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.Get(System.String)">
+            <summary>
+            查询字典定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.GetOption(System.String)">
+            <summary>
+            根据分组查询字典
+            </summary>
+            <param name="option">字典分组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.Create(Lc.Bht.Model.Dto.System.OptionsCreateDto)">
+            <summary>
+            添加字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.Update(Lc.Bht.Model.Dto.System.OptionsUpdateDto)">
+            <summary>
+            更新字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.OptionsController.Delete(System.String)">
+            <summary>
+            删除字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.PowersController">
+            <summary>
+            权限定义
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.PowersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.PowersController._powerService">
+            <summary>
+            权限定义接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.PowersController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.PowersController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.PowersController.Query(Lc.Bht.Model.Dto.System.PowersQueryDto)">
+            <summary>
+            查询权限定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.PowersController.Get(System.String)">
+            <summary>
+            查询权限定义
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.PowersController.Create(Lc.Bht.Model.Dto.System.PowersCreateDto)">
+            <summary>
+            添加权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.PowersController.Update(Lc.Bht.Model.Dto.System.PowersUpdateDto)">
+            <summary>
+            更新权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.PowersController.Delete(System.String)">
+            <summary>
+            删除权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.RolePowersController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolePowersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolePowersController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolePowersController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolePowersController._powerService">
+            <summary>
+            权限定义接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolePowersController._userRoleService">
+            <summary>
+            用户角色接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolePowersController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Lc.Bht.Interfaces.IUnitOfWork,Lc.Bht.Interfaces.ISysRolepowerService,Lc.Bht.Interfaces.ISysPowerService,Lc.Bht.Interfaces.ISysUserroleService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="unitOfWork"></param>
+            <param name="rolePowerService"></param>
+            <param name="powerService"></param>
+            <param name="userRoleService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolePowersController.GetPowersGroup">
+            <summary>
+            按分组汇总查询权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolePowersController.GetRolePowers(System.String)">
+            <summary>
+            查询角色权限
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolePowersController.UpdateRolePowers(Lc.Bht.Model.Dto.System.RolePowersUpdateDto)">
+            <summary>
+            更新角色权限
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.RolesController">
+            <summary>
+            角色定义
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolesController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolesController._roleService">
+            <summary>
+            角色定义接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolesController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RolesController._userRoleService">
+            <summary>
+            用户角色接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolesController.Query(Lc.Bht.Model.Dto.System.RolesQueryDto)">
+            <summary>
+            查询角色定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolesController.Get(System.String)">
+            <summary>
+            查询角色定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolesController.Create(Lc.Bht.Model.Dto.System.RolesCreateDto)">
+            <summary>
+            添加角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolesController.Update(Lc.Bht.Model.Dto.System.RolesUpdateDto)">
+            <summary>
+            更新角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RolesController.Delete(System.String)">
+            <summary>
+            删除角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.RoleUsersController">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RoleUsersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RoleUsersController._userRoleService">
+            <summary>
+            用户角色接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.RoleUsersController._userService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RoleUsersController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Lc.Bht.Interfaces.ISysUserroleService,Lc.Bht.Interfaces.ISysUsersService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="userRoleService"></param>
+            <param name="userService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RoleUsersController.Get(System.String)">
+            <summary>
+            查询角色用户
+            </summary>
+            <param name="roleId">角色 Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RoleUsersController.Create(Lc.Bht.Model.Dto.System.RoleUsersCreateDto)">
+            <summary>
+            添加角色用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RoleUsersController.Delete(Lc.Bht.Model.Dto.System.RoleUsersDeleteDto)">
+            <summary>
+            删除角色用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.RoleUsersController.GetExcludeUsers(System.String)">
+            <summary>
+            查询角色未添加用户列表
+            </summary>
+            <param name="roleId">角色 Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.TasksController">
+            <summary>
+            计划任务
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.TasksController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.TasksController._tasksQzService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.TasksController._schedulerServer">
+            <summary>
+            定时服务接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Query(Lc.Bht.Model.Dto.System.TasksQueryDto)">
+            <summary>
+            查询计划任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Get(System.String)">
+            <summary>
+            查询计划任务
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Create(Lc.Bht.Model.Dto.System.TasksCreateDto)">
+            <summary>
+            添加任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Update(Lc.Bht.Model.Dto.System.TasksUpdateDto)">
+            <summary>
+            更新任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Delete(System.String)">
+            <summary>
+            删除任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Start(System.String)">
+            <summary>
+            启动任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.TasksController.Stop(System.String)">
+            <summary>
+            停止任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.UserCenterController">
+            <summary>
+            用户中心
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UserCenterController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UserCenterController._usersService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UserCenterController._relationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UserCenterController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Lc.Bht.Interfaces.ISysUsersService,Lc.Bht.Interfaces.ISysUserrelationService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="usersService"></param>
+            <param name="relationService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UserCenterController.UpdatePassword(Lc.Bht.Model.Dto.System.UserCenterUpdatePasswordDto)">
+            <summary>
+            更新密码（用户自用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UserCenterController.Update(Lc.Bht.Model.Dto.System.UserCenterUpdateDto)">
+            <summary>
+            更新用户信息（用户自用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UserCenterController.AvatarUpload(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            头像上传接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.System.UsersController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UsersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UsersController._ISysUsersService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.System.UsersController._ISysUserrelationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.#ctor(Lc.Bht.Interfaces.ISysUsersService,Lc.Bht.Interfaces.ISysUserrelationService,Lc.Bht.Admin.Extensions.TokenManager)">
+            <summary>
+            
+            </summary>
+            <param name="ISysUsersService"></param>
+            <param name="ISysUserrelationService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Query(Lc.Bht.Model.Dto.System.UsersQueryDto)">
+            <summary>
+            查询用户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Get(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Create(Lc.Bht.Model.Dto.System.UsersCreateDto)">
+            <summary>
+            添加用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Update(Lc.Bht.Model.Dto.System.UsersUpdateDto)">
+            <summary>
+            更新用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Delete(Lc.Bht.Model.Dto.System.UsersDeleteDto)">
+            <summary>
+            删除用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.Enable(Lc.Bht.Model.Dto.System.UsersEnableDto)">
+            <summary>
+            批量禁用启用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.UsersController.ResetPassword(Lc.Bht.Model.Dto.System.UsersResetPasswordDto)">
+            <summary>
+            重置密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackInput">
+            <summary>
+            第一次调用mes 入参 接口 
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackOutput">
+            <summary>
+            第一次调用mes 出参 接口 
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackBackInput">
+            <summary>
+            第二次调用mes 入参 接口 
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackBackOutput">
+            <summary>
+            第二次调用mes 出参 接口 
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._cesSoap">
+            <summary>
+            mes webServer服务
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.#ctor(Lc.Bht.Interfaces.IPcbRackInputService,Lc.Bht.Interfaces.IPcbRackOutputService,Lc.Bht.Interfaces.IPcbRackBackInputService,Lc.Bht.Interfaces.IPcbRackBackOutputService,ServiceReference1.cesSoap)">
+            <summary>
+            
+            </summary>
+            <param name="IPcbRackInputService"></param>
+            <param name="IPcbRackOutputService"></param>
+            <param name="IPcbRackBackInputService"></param>
+            <param name="IPcbRackBackOutputService"></param>
+            <param name="cesSoap"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.PcbLoadMaterla(Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto)">
+            <summary>
+            
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Extensions.EntityExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.EntityExtension.ToCreate``1(``0,Lc.Bht.Model.SysUsers)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source"></param>
+            <param name="uers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Extensions.Setup.SetupSwagger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.Setup.SetupSwagger.AddSwaggerSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.Setup.SetupSwagger.UseSwaggerSetup(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="F:Lc.Bht.Admin.Extensions.TokenManager._memoryCache">
+            <summary>
+            缓存组件
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Extensions.TokenManager._onlineService">
+            <summary>
+            在线会话
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Extensions.TokenManager._usersService">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Extensions.TokenManager._accessor">
+            <summary>
+            HTTP上下文
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.CreateSession(Lc.Bht.Model.SysUsers,Lc.Bht.Model.SourceType,System.Int32)">
+            <summary>
+            创建 Session
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.UpdateSession(System.String)">
+            <summary>
+            更新Session
+            </summary>
+            <param name="userSession">用户Session</param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.RefreshSession(System.String)">
+            <summary>
+            刷新用户所有Session信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.RemoveSession(System.String)">
+            <summary>
+            清除指定 Session
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.RemoveAllSession(System.String)">
+            <summary>
+            清除用户所有 Session
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="P:Lc.Bht.Admin.Extensions.TokenManager.GetSysToken">
+            <summary>
+            获取Session
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.GetSessionInfo">
+            <summary>
+            当前登录用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.IsAuthenticated">
+            <summary>
+            判断用户是否登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.GetSessionItem``1(System.String)">
+            <summary>
+            获取 Session 内容
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.GetSessionItem``1(System.String,System.String)">
+            <summary>
+            获取 Session 内容
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.GetSysTokens">
+            <summary>
+            获取token 返回用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Extensions.TokenManager.DelTokens">
+            <summary>
+            删除token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>
