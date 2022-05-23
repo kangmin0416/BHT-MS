@@ -58,7 +58,7 @@ export default {
       // 角色列表
       dataRoleResult: [],
       // 角色id
-      roleId: "",
+      roleId: undefined,
       // 过滤查询
       search: '',
       // 右键当前行

@@ -13,5 +13,5 @@ const getters = {
   routers: state => state.routers.routers,
   addRouters: state => state.routers.addRouters,
   sidebarRouters: state => state.routers.sidebarRouters
-}
-export default getters
+};
+export default getters;

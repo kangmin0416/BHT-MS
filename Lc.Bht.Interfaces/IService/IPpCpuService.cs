@@ -14,7 +14,7 @@ using System;
 
 namespace Lc.Bht.Interfaces
 {
-    public interface IPcbRackBackOutputService : IBaseService<PcbRackBackOutput>
+    public interface IPpCpuService : IBaseService<PpCpu>
     {
 
         #region CustomInterface 

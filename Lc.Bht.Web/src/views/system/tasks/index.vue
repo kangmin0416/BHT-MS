@@ -4,7 +4,14 @@
       <el-col>
         <el-form :inline="true" @submit.native.prevent>
           <el-form-item>
-            <el-input v-model="queryParams.queryText" placeholder="请输入计划任务名称" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
+            <el-input
+              v-model="queryParams.queryText"
+              placeholder="请输入计划任务名称"
+              clearable
+              prefix-icon="el-icon-search"
+              @keyup.enter.native="handleQuery"
+              @clear="handleQuery"
+            />
           </el-form-item>
           <el-form-item>
             <el-button type="primary" icon="el-icon-search" @click="handleQuery">搜索</el-button>
@@ -21,7 +28,17 @@
       </el-button-group>
     </el-row>
     <el-row>
-      <el-table ref="tasks" v-loading="loading" :data="dataTasks" row-key="id" stripe border :height="tableHeight*0.65" :default-sort="{prop: queryParams.orderby, order: queryParams.sort}" @sort-change="handleSortable">
+      <el-table
+        ref="tasks"
+        v-loading="loading"
+        :data="dataTasks"
+        row-key="id"
+        stripe
+        border
+        :height="tableHeight*0.65"
+        :default-sort="{prop: queryParams.orderby, order: queryParams.sort}"
+        @sort-change="handleSortable"
+      >
         <el-table-column type="index" :index="handleIndexCalc" label="#" align="center" />
         <el-table-column sortable prop="name" align="center" :show-overflow-tooltip="true" label="任务名称" width="150" />
         <el-table-column sortable prop="jobGroup" :show-overflow-tooltip="true" align="center" label="任务分组" width="150" />
@@ -48,15 +65,41 @@
         <el-table-column label="操作" align="center" width="190" class-name="small-padding fixed-width">
           <template slot-scope="scope">
             <el-button-group>
-              <el-button v-show="!scope.row.isStart" v-permission="['PRIV_TASKS_UPDATE']" type="success" size="mini" icon="el-icon-video-play" @click="handleStart(scope.row)" />
-              <el-button v-show="scope.row.isStart" v-permission="['PRIV_TASKS_UPDATE']" type="warning" size="mini" icon="el-icon-video-pause" @click="handleStop(scope.row)" />
+              <el-button
+                v-show="!scope.row.isStart"
+                v-permission="['PRIV_TASKS_UPDATE']"
+                type="success"
+                size="mini"
+                icon="el-icon-video-play"
+                @click="handleStart(scope.row)"
+              />
+              <el-button
+                v-show="scope.row.isStart"
+                v-permission="['PRIV_TASKS_UPDATE']"
+                type="warning"
+                size="mini"
+                icon="el-icon-video-pause"
+                @click="handleStop(scope.row)"
+              />
               <el-button v-permission="['PRIV_TASKS_UPDATE']" type="info" size="mini" icon="el-icon-edit" @click="handleUpdate(scope.row)" />
-              <el-button v-permission="['PRIV_TASKS_DELETE']" type="danger" size="mini" icon="el-icon-delete" @click="handleDelete(scope.row)" />
+              <el-button
+                v-permission="['PRIV_TASKS_DELETE']"
+                type="danger"
+                size="mini"
+                icon="el-icon-delete"
+                @click="handleDelete(scope.row)"
+              />
             </el-button-group>
           </template>
         </el-table-column>
       </el-table>
-      <pagination v-show="total > 0" :total="total" :page.sync="queryParams.pageIndex" :limit.sync="queryParams.pageSize" @pagination="getList" />
+      <pagination
+        v-show="total > 0"
+        :total="total"
+        :page.sync="queryParams.pageIndex"
+        :limit.sync="queryParams.pageSize"
+        @pagination="getList"
+      />
     </el-row>
 
     <el-dialog :title="title" :visible.sync="open" width="800px" append-to-body :close-on-click-modal="false" @close="cancel">
@@ -117,8 +160,7 @@
         </el-row>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button v-preventReClick type="primary" @click="submitForm">确 定
-        </el-button>
+        <el-button v-preventReClick type="primary" @click="submitForm">确 定</el-button>
         <el-button @click="open = false">取 消</el-button>
       </div>
     </el-dialog>
@@ -126,14 +168,7 @@
 </template>
 
 <script>
-import {
-  queryTasks,
-  createTasks,
-  updateTasks,
-  deleteTasks,
-  startTasks,
-  stopTasks
-} from '@/api/system/tasks'
+import { queryTasks, createTasks, updateTasks, deleteTasks, startTasks, stopTasks } from '@/api/system/tasks'
 export default {
   name: 'tasks',
   data() {
@@ -219,27 +254,15 @@ export default {
       ],
       // 表单校验
       rules: {
-        name: [
-          { required: true, message: '任务名称不能为空', trigger: 'blur' }
-        ],
-        jobGroup: [
-          { required: true, message: '任务分组不能为空', trigger: 'blur' }
-        ],
-        assemblyName: [
-          { required: true, message: '程序集名称不能为空', trigger: 'blur' }
-        ],
-        className: [
-          { required: true, message: '任务类名不能为空', trigger: 'blur' }
-        ],
-        triggerType: [
-          { required: true, message: '请选择触发器类型', trigger: 'blur' }
-        ],
+        name: [{ required: true, message: '任务名称不能为空', trigger: 'blur' }],
+        jobGroup: [{ required: true, message: '任务分组不能为空', trigger: 'blur' }],
+        assemblyName: [{ required: true, message: '程序集名称不能为空', trigger: 'blur' }],
+        className: [{ required: true, message: '任务类名不能为空', trigger: 'blur' }],
+        triggerType: [{ required: true, message: '请选择触发器类型', trigger: 'blur' }],
         cron: [{ validator: cronValidate, trigger: 'blur' }],
         beginTime: [{ validator: beginTimeValidate, trigger: 'blur' }],
         endTime: [{ validator: endTimeValidate, trigger: 'blur' }],
-        intervalSecond: [
-          { validator: intervalSecondValidate, type: 'number', trigger: 'blur' }
-        ]
+        intervalSecond: [{ validator: intervalSecondValidate, type: 'number', trigger: 'blur' }]
       }
     }
   },
@@ -321,10 +344,10 @@ export default {
             }
           })
         })
-        .catch(function() {})
+        .catch(function () {})
     },
     /** 提交按钮 */
-    submitForm: function() {
+    submitForm: function () {
       this.$refs['form'].validate(valid => {
         if (valid) {
           if (this.form.id !== undefined) {
@@ -380,9 +403,7 @@ export default {
     },
     // 自动计算分页 Id
     handleIndexCalc(index) {
-      return (
-        (this.queryParams.pageIndex - 1) * this.queryParams.pageSize + index + 1
-      )
+      return (this.queryParams.pageIndex - 1) * this.queryParams.pageSize + index + 1
     },
     // 取消按钮
     cancel() {

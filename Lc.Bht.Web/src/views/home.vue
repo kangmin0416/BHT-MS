@@ -1,9 +1,5 @@
 <template>
-  <div class="dashboard-container" >
-    sd
-  </div>
-  
-
+  <div class="dashboard-container">欢迎使用</div>
 </template>
 
 <script>

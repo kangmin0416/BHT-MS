@@ -71,7 +71,14 @@
                 </el-col>
                 <el-col :span="24">
                   <el-form-item label="备注" prop="remark">
-                    <el-input v-model="form.remark" type="textarea" :autosize="{minRows:2}" maxlength="100" show-word-limit placeholder="请输入用户备注" />
+                    <el-input
+                      v-model="form.remark"
+                      type="textarea"
+                      :autosize="{minRows:2}"
+                      maxlength="100"
+                      show-word-limit
+                      placeholder="请输入用户备注"
+                    />
                   </el-form-item>
                 </el-col>
               </el-row>
@@ -114,7 +121,7 @@
               <el-button @click="cancel">取 消</el-button>
             </div>
           </div>
-        </el-tab-pane> -->
+        </el-tab-pane>-->
       </el-tabs>
     </div>
 
@@ -123,7 +130,14 @@
         <el-col>
           <el-form :inline="true" @submit.native.prevent>
             <el-form-item>
-              <el-input v-model="queryParams.queryText" placeholder="请输入用户名称" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
+              <el-input
+                v-model="queryParams.queryText"
+                placeholder="请输入用户名称"
+                clearable
+                prefix-icon="el-icon-search"
+                @keyup.enter.native="handleQuery"
+                @clear="handleQuery"
+              />
             </el-form-item>
             <el-form-item>
               <el-button type="primary" icon="el-icon-search" @click="handleQuery">搜索</el-button>
@@ -137,7 +151,8 @@
         <el-button v-permission="['PRIV_USERS_DELETE']" type="danger" icon="el-icon-delete" size="mini" @click="handleDelete">删除用户</el-button>
         <el-dropdown trigger="click" style="margin-left:10px">
           <el-button type="primary" icon="el-icon-unlock">
-            设置启用<i class="el-icon-arrow-down el-icon--right" />
+            设置启用
+            <i class="el-icon-arrow-down el-icon--right" />
           </el-button>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item @click.native="handleEnableUsers">启用选中记录</el-dropdown-item>
@@ -151,7 +166,17 @@
       </el-row>
 
       <el-row>
-        <el-table ref="userTable" v-loading="loading" :data="userTable.dataSource" row-key="id" stripe border :height="tableHeight*0.65" :default-sort="{prop: queryParams.orderby, order: queryParams.sort}" @sort-change="handleSortable">
+        <el-table
+          ref="userTable"
+          v-loading="loading"
+          :data="userTable.dataSource"
+          row-key="id"
+          stripe
+          border
+          :height="tableHeight*0.65"
+          :default-sort="{prop: queryParams.orderby, order: queryParams.sort}"
+          @sort-change="handleSortable"
+        >
           <el-table-column sortable type="selection" width="55" align="center" />
           <el-table-column sortable prop="userID" align="center" label="用户账号" width="150" />
           <el-table-column sortable prop="userName" :show-overflow-tooltip="true" align="center" label="用户名称" />
@@ -160,20 +185,41 @@
           <el-table-column sortable prop="createTime" align="center" :show-overflow-tooltip="true" label="创建时间" />
           <el-table-column sortable prop="enabled" align="center" label="是否启用" width="100">
             <template slot-scope="scope">
-              <i :style="scope.row.enabled === true ?'color:green':'color:red'" :class="scope.row.enabled === true ? 'el-icon-success ':'el-icon-error'" />
+              <i
+                :style="scope.row.enabled === true ?'color:green':'color:red'"
+                :class="scope.row.enabled === true ? 'el-icon-success ':'el-icon-error'"
+              />
             </template>
           </el-table-column>
           <el-table-column prop="remark" align="center" label="备注" :show-overflow-tooltip="true" />
           <el-table-column label="操作" align="center" width="200" class-name="small-padding fixed-width">
             <template slot-scope="scope">
               <el-button-group>
-                <el-button v-permission="['PRIV_USERS_UPDATE']" type="info" size="mini" icon="el-icon-edit" @click="handleUpdate(scope.row)" />
-                <el-button v-permission="['PRIV_USERS_RESETPASSWD']" type="danger" size="mini" icon="el-icon-lock" @click="handleResetPassword(scope.row)" />
+                <el-button
+                  v-permission="['PRIV_USERS_UPDATE']"
+                  type="info"
+                  size="mini"
+                  icon="el-icon-edit"
+                  @click="handleUpdate(scope.row)"
+                />
+                <el-button
+                  v-permission="['PRIV_USERS_RESETPASSWD']"
+                  type="danger"
+                  size="mini"
+                  icon="el-icon-lock"
+                  @click="handleResetPassword(scope.row)"
+                />
               </el-button-group>
             </template>
           </el-table-column>
         </el-table>
-        <pagination v-show="total > 0" :total="total" :page.sync="queryParams.pageIndex" :limit.sync="queryParams.pageSize" @pagination="getList" />
+        <pagination
+          v-show="total > 0"
+          :total="total"
+          :page.sync="queryParams.pageIndex"
+          :limit.sync="queryParams.pageSize"
+          @pagination="getList"
+        />
       </el-row>
       <!-- 重置密码对话框 -->
       <el-dialog title="重置密码" :visible.sync="openPassword" width="800px" append-to-body :close-on-click-modal="false">
@@ -200,14 +246,7 @@
   </div>
 </template>
 <script>
-import {
-  queryUsers,
-  createUser,
-  updateUser,
-  deleteUsers,
-  enableUsers,
-  resetPassword
-} from '@/api/users/users'
+import { queryUsers, createUser, updateUser, deleteUsers, enableUsers, resetPassword } from '@/api/users/users'
 import { GetRelationTree, UpdateUserRelation } from '@/api/system/authorize'
 export default {
   name: 'users',
@@ -257,12 +296,8 @@ export default {
       title: '',
       // 表单校验
       rules: {
-        userID: [
-          { required: true, message: '用户编号不能为空', trigger: 'blur' }
-        ],
-        userName: [
-          { required: true, message: '用户名称不能为空', trigger: 'blur' }
-        ],
+        userID: [{ required: true, message: '用户编号不能为空', trigger: 'blur' }],
+        userName: [{ required: true, message: '用户名称不能为空', trigger: 'blur' }],
         password: [
           { required: true, message: '用户密码不能为空', trigger: 'blur' },
           { min: 6, message: '用户密码长度至少6位', trigger: 'blur' }
@@ -341,15 +376,11 @@ export default {
       if (this.delSelections.length === 0) {
         return
       }
-      this.$confirm(
-        '是否确认删除选中的 ' + this.delSelections.length + ' 条数据?',
-        '警告',
-        {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }
-      )
+      this.$confirm('是否确认删除选中的 ' + this.delSelections.length + ' 条数据?', '警告', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      })
         .then(() => {
           deleteUsers({
             userIds: this.delSelections
@@ -490,9 +521,7 @@ export default {
     submitPasswordForm() {
       this.$refs['passwordForm'].validate(valid => {
         if (valid) {
-          if (
-            this.passwordForm.password !== this.passwordForm.confirmPassword
-          ) {
+          if (this.passwordForm.password !== this.passwordForm.confirmPassword) {
             this.$message.error('两次密码输入不一致')
             return
           }

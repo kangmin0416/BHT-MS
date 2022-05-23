@@ -1,12 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\fxiaojingling\ProjectCode\Lc.Bht.Admin\Lc.Bht.Admin\Lc.Bht.Admin.xml</DocumentationFile>
+    <DocumentationFile>E:\fxiaojingling\ProjectCode\km提交BHT-MS\Lc.Bht.Admin\Lc.Bht.Admin.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,6 +34,10 @@
     <ProjectReference Include="..\Lc.Bht.Interfaces\Lc.Bht.Interfaces.csproj" />
     <ProjectReference Include="..\Lc.Bht.Model\Lc.Bht.Model.csproj" />
     <ProjectReference Include="..\Lc.Bht.Tasks\Lc.Bht.Tasks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Connected Services\" />
   </ItemGroup>
 
 </Project>

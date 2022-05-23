@@ -14,8 +14,12 @@ using System;
 
 namespace Lc.Bht.Interfaces
 {
-    public interface IPcbRackOutputService : IBaseService<PcbRackOutput>
+    public class PpTrayService : BaseService<PpTray>, IPpTrayService
     {
+
+        public PpTrayService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
 
         #region CustomInterface 
         #endregion

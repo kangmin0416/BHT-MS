@@ -17,7 +17,7 @@
           <svg-icon slot="prefix" icon-class="validCode" class="el-input__icon input-icon" />
         </el-input>
         <div class="login-code">
-          <img ref="verifyCode" :src="codeUrl" @click="getCode">
+          <img ref="verifyCode" :src="codeUrl" @click="getCode" />
         </div>
       </el-form-item>
       <el-form-item style="width:100%;">
@@ -45,15 +45,9 @@ export default {
         code: ''
       },
       loginRules: {
-        username: [
-          { required: true, trigger: 'blur', message: '用户名不能为空' }
-        ],
-        password: [
-          { required: true, trigger: 'blur', message: '密码不能为空' }
-        ],
-        code: [
-          { required: true, trigger: 'change', message: '验证码不能为空' }
-        ],
+        username: [{ required: true, trigger: 'blur', message: '用户名不能为空' }],
+        password: [{ required: true, trigger: 'blur', message: '密码不能为空' }],
+        code: [{ required: true, trigger: 'change', message: '验证码不能为空' }],
         uuid: ''
       },
       loading: false
@@ -85,7 +79,7 @@ export default {
               console.log(response)
               this.loading = false
               if (response.code === 200) {
-                this.$router.push({ path: '/dashboard' })
+                this.$router.push({ path: '/dashboard' }).catch(() => {})
               } else {
                 this.getCode()
               }

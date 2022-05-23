@@ -93,7 +93,7 @@ export default {
       total: 0,
       // 查询参数
       queryParams: {
-        name: "",
+        name: undefined,
         pageIndex: 1,
         pageSize: 10,
         orderby: 'createTime',

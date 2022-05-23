@@ -6,12 +6,18 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\fxiaojingling\ProjectCode\Lc.Bht.Admin\Lc.Bht.Model\Lc.Bht.Model.xml</DocumentationFile>
+    <DocumentationFile>E:\fxiaojingling\ProjectCode\km提交BHT-MS\Lc.Bht.Model\Lc.Bht.Model.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entity\PcbRackBackInput.cs" />
+    <Compile Remove="Entity\PcbRackBackOutput.cs" />
+    <Compile Remove="Entity\PcbRackInput.cs" />
+    <Compile Remove="Entity\PcbRackOutput.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Entity\" />
-    <Folder Include="View\Basic\" />
   </ItemGroup>
 
   <ItemGroup>

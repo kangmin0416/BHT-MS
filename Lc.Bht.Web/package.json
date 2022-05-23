@@ -46,6 +46,7 @@
     "sass": "^1.32.12",
     "screenfull": "^5.1.0",
     "vue": "^2.6.14",
+    "vue-qr": "^4.0.6",
     "vue-qriously": "^1.1.1",
     "vue-router": "^3.5.2",
     "vue-template-compiler": "^2.6.14",

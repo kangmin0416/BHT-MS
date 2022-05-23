@@ -2,7 +2,7 @@ module.exports = {
   /**
    * @description 网站标题
    */
-  title: 'Meiam.System',
+  title: '浪潮贵阳产线',
   /**
    * @description 是否显示 tagsView
    */

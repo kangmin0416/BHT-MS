@@ -5,6 +5,8 @@
 @import 'sidebar';
 @import 'btn';
 @import 'eladmin';
+@import 'global-css';
+
 
 body {
   height: 100%;
@@ -307,6 +309,18 @@ aside {
 .el-table th.gutter {
   display: table-cell !important;
 }
+
+.el-table .NG {
+  background: #ff0000;
+  color: #FFF;
+}
+
+
+
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  // background-color: #34dd00 !important;
+  color: #666;
+  }
 
 .el-checkbox.mini .el-checkbox__label{
   font-size: 12px !important;

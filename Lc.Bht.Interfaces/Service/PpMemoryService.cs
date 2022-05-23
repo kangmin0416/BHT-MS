@@ -14,10 +14,10 @@ using System;
 
 namespace Lc.Bht.Interfaces
 {
-    public class PcbRackOutputService : BaseService<PcbRackOutput>, IPcbRackOutputService
+    public class PpMemoryService : BaseService<PpMemory>, IPpMemoryService
     {
 
-        public PcbRackOutputService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        public PpMemoryService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 

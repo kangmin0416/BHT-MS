@@ -123,7 +123,7 @@ export default {
       // 上传链接
       avatarUploadUrl:
         window.baseUrl.https + '/api/userCenter/AvatarUpload',
-      headers: { Authorization:"Bearer "+ getToken() },
+      headers: { Authorization:'Bearer ' + getToken() },
 
       // 加载中
       loading: false,
@@ -169,13 +169,10 @@ export default {
   },
   created() {
     this.getUserInfo()
- 
   },
   methods: {
     // 获取用户信息
     getUserInfo() {
-         console.log(this.avatarUploadUrl);
-         console.log(this.headers);
       getUserInfo().then(response => {
         this.userForm = response.data
       })

@@ -1249,6 +1249,61 @@
             默认 : 
             </summary>
         </member>
+        <member name="T:Lc.Bht.Model.Dto.UpperComputer.HistoryDto">
+            <summary>
+            历史记录
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.HistoryDto.creation_time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.HistoryDto.pro_sn">
+            <summary>
+            主板sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.HistoryDto.memo_sn">
+            <summary>
+            内存sn
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto">
+            <summary>
+            人工安装内存
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.pcb_sn">
+            <summary>
+            主板sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.memo_sn">
+            <summary>
+            内存sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.con_sn">
+            <summary>
+            载具sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.op_flag">
+            <summary>
+            操作码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.device_sn">
+            <summary>
+            设备条码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto.work_sn">
+            <summary>
+            工位
+            </summary>
+        </member>
         <member name="T:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto">
             <summary>
             主板上料第一次调mes接口入参
@@ -1279,29 +1334,14 @@
             pcb板sn
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.box_sn">
-            <summary>
-            备用
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.con_sn">
-            <summary>
-            备用
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.mo_num">
-            <summary>
-            备用
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.Dto.UpperComputer.Mac.img_path">
-            <summary>
-            相对路径
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.Dto.UpperComputer.Mac.mac_sn">
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.mac_sn">
             <summary>
             mac条码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto.tray">
+            <summary>
+            托盘号
             </summary>
         </member>
         <member name="T:Lc.Bht.Model.BaseCompany">
@@ -1796,328 +1836,450 @@
             默认 : 
             </summary>
         </member>
-        <member name="T:Lc.Bht.Model.PcbRackBackInput">
+        <member name="T:Lc.Bht.Model.PpCpu">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.id">
+        <member name="P:Lc.Bht.Model.PpCpu.id">
             <summary>
-            描述 : id唯一标识 
+            描述 : 主键id 
             空值 : False
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.op_flag">
+        <member name="P:Lc.Bht.Model.PpCpu.pcb_id">
             <summary>
-            描述 : 操作码(B02) 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.device_sn">
-            <summary>
-            描述 : 设备条码 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.work_sn">
-            <summary>
-            描述 : 工位SN 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.emp_no">
-            <summary>
-            描述 : 操作员工号 
+            描述 : 主板id 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.pro_sn">
+        <member name="P:Lc.Bht.Model.PpCpu.cpu_sn">
             <summary>
-            描述 : PCB板SN 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.box_sn">
-            <summary>
-            描述 : 备用 
+            描述 : cpu_sn 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.con_sn">
+        <member name="P:Lc.Bht.Model.PpCpu.cpu_code">
             <summary>
-            描述 : 载具SN  
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.mo_num">
-            <summary>
-            描述 : 制令单号 
+            描述 : cpu料号 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.mac_sn">
+        <member name="P:Lc.Bht.Model.PpCpu.cpu_loc">
             <summary>
-            描述 : MAC条码 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.rhythm">
-            <summary>
-            描述 : 节拍（MS） 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.img_path">
-            <summary>
-            描述 : 相对路径, 
+            描述 : cpu点位 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.creation_time">
+        <member name="P:Lc.Bht.Model.PpCpu.cpu_coor">
+            <summary>
+            描述 : cpu坐标 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.cpu_ang">
+            <summary>
+            描述 : cpu角度 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.sup_code">
+            <summary>
+            描述 : 支架料号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.rad_code">
+            <summary>
+            描述 : 散热器料号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.img_path">
+            <summary>
+            描述 : 相对路劲 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.rhythm">
+            <summary>
+            描述 : 节拍 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpCpu.creation_time">
             <summary>
             描述 : 创建时间 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackInput.updata_time">
+        <member name="P:Lc.Bht.Model.PpCpu.updata_time">
             <summary>
             描述 : 更新时间 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="T:Lc.Bht.Model.PcbRackBackOutput">
+        <member name="T:Lc.Bht.Model.PpMemory">
             <summary>
-            
+            主板安装内存
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.id">
+        <member name="P:Lc.Bht.Model.PpMemory.id">
             <summary>
-            描述 : id唯一标识 
+            描述 : 主键 
             空值 : False
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.result_flag">
+        <member name="P:Lc.Bht.Model.PpMemory.pcb_id">
             <summary>
-            描述 : OK/NG 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.flow_code">
-            <summary>
-            描述 : 流程码 
+            描述 : 主板id 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.next_stop">
+        <member name="P:Lc.Bht.Model.PpMemory.memo_sn">
             <summary>
-            描述 : 下一站工作点 
+            描述 : 内存sn 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.result_message">
+        <member name="P:Lc.Bht.Model.PpMemory.memo_loc">
             <summary>
-            描述 : 结果信息 
+            描述 : 内存安装点位 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.mo_num">
+        <member name="P:Lc.Bht.Model.PpMemory.memo_code">
             <summary>
-            描述 : 制令单号 
+            描述 : 内存料号 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.wo_num">
+        <member name="P:Lc.Bht.Model.PpMemory.memo_plan_pressure">
             <summary>
-            描述 : 工单号 
+            描述 : 内存压力（预估值） 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.creation_time">
+        <member name="P:Lc.Bht.Model.PpMemory.memo_actual_pressure">
+            <summary>
+            描述 : 内存压力（实际值） 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpMemory.memo_tf">
+            <summary>
+            描述 : 内存真假属性 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpMemory.img_path">
+            <summary>
+            描述 : 相对路劲 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpMemory.rhythm">
+            <summary>
+            描述 : 节拍 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpMemory.creation_time">
             <summary>
             描述 : 创建时间 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackBackOutput.updata_time">
+        <member name="P:Lc.Bht.Model.PpMemory.updata_time">
             <summary>
             描述 : 更新时间 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="T:Lc.Bht.Model.PcbRackInput">
+        <member name="T:Lc.Bht.Model.PpPcb">
             <summary>
-            pcb上料，参数
+            主板表
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.id">
+        <member name="P:Lc.Bht.Model.PpPcb.id">
             <summary>
-            描述 : ID唯一标识 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.op_flag">
-            <summary>
-            描述 : 操作码(B01) 
+            描述 : 主键 
             空值 : False
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.device_sn">
+        <member name="P:Lc.Bht.Model.PpPcb.tray_id">
             <summary>
-            描述 : 设备SN(plc) 
+            描述 : 托盘id 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.pro_sn">
+            <summary>
+            描述 : 主板序列号 
             空值 : False
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.work_sn">
-            <summary>
-            描述 : 工位SN 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.emp_no">
-            <summary>
-            描述 : 操作员工号（待定） 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.pro_sn">
-            <summary>
-            描述 : PCB板SN 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.box_sn">
-            <summary>
-            描述 : 备用 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.con_sn">
-            <summary>
-            描述 : 备用 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.mo_num">
-            <summary>
-            描述 : 备用 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.creation_time">
-            <summary>
-            描述 : 创建时间 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackInput.updata_time">
-            <summary>
-            描述 : 更新时间 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="T:Lc.Bht.Model.PcbRackOutput">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.id">
-            <summary>
-            描述 : ID唯一标识 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.result_flag">
-            <summary>
-            描述 : OK/NG 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.flow_code">
-            <summary>
-            描述 : 流程码 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.next_stop">
-            <summary>
-            描述 : 下一站工作点 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.result_message">
-            <summary>
-            描述 : 结果信息 
-            空值 : True
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.mo_num">
-            <summary>
-            描述 : 制令单号 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.wo_num">
-            <summary>
-            描述 : 工单号 
-            空值 : False
-            默认 : 
-            </summary>
-        </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.mboard_code">
+        <member name="P:Lc.Bht.Model.PpPcb.mboard_code">
             <summary>
             描述 : 主板料号 
             空值 : False
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.creation_time">
+        <member name="P:Lc.Bht.Model.PpPcb.mac_sn">
+            <summary>
+            描述 : 主板mac地址 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.rhythm">
+            <summary>
+            描述 : 节拍（MS） 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.img_path">
+            <summary>
+            描述 : 相对路径, 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.con_sn">
+            <summary>
+            描述 : 载具sn 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.device_sn">
+            <summary>
+            描述 : 设备SN(plc) 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.work_sn">
+            <summary>
+            描述 : 工位SN 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.emp_no">
+            <summary>
+            描述 : 操作员工号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpPcb.creation_time">
             <summary>
             描述 : 创建时间 
             空值 : True
             默认 : 
             </summary>
         </member>
-        <member name="P:Lc.Bht.Model.PcbRackOutput.updata_time">
+        <member name="P:Lc.Bht.Model.PpPcb.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PpTray">
+            <summary>
+            托盘表
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.id">
+            <summary>
+            描述 : id 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.tray">
+            <summary>
+            描述 : 托盘号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.pcb_id">
+            <summary>
+            描述 : 主板id 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.workstation">
+            <summary>
+            描述 : 工站 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpTray.updata_time">
+            <summary>
+            描述 : 更新时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PpVerifyPass">
+            <summary>
+            主板验证表
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.id">
+            <summary>
+            描述 : 主键 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.all_id">
+            <summary>
+            描述 : 主板id,内存id,主板id 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.type">
+            <summary>
+            描述 : 1：主板验证。2：主板过站。3：内存验证。4：内存过站 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.op_flag">
+            <summary>
+            描述 : 操作码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.result_flag">
+            <summary>
+            描述 : OK/NG 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.flow_code">
+            <summary>
+            描述 : 流程码 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.next_stop">
+            <summary>
+            描述 : 下一站工作点 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.result_message">
+            <summary>
+            描述 : 结果信息 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.mo_num">
+            <summary>
+            描述 : 制令单号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.wo_num">
+            <summary>
+            描述 : 工单号 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpVerifyPass.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.PpWorkstation">
+            <summary>
+            托盘工站历史记录
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpWorkstation.id">
+            <summary>
+            描述 : 主键 
+            空值 : False
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpWorkstation.tray_id">
+            <summary>
+            描述 : 托盘id 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpWorkstation.workstation">
+            <summary>
+            描述 : 工站 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpWorkstation.creation_time">
+            <summary>
+            描述 : 创建时间 
+            空值 : True
+            默认 : 
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.PpWorkstation.updata_time">
             <summary>
             描述 : 更新时间 
             空值 : True
@@ -3257,6 +3419,187 @@
             报工单据
             </summary>
         </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.result_flag">
+            <summary>
+            OK/NG
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.flow_code">
+            <summary>
+            流程码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.next_stop">
+            <summary>
+            下一站工作点
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.mo_num">
+            <summary>
+            制令单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryBackOutput.wo_num">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.result_flag">
+            <summary>
+            OK/NG
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.flow_code">
+            <summary>
+            流程码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.next_stop">
+            <summary>
+            下一站工作点
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.mo_num">
+            <summary>
+            制令单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.wo_num">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.MemoryRackOutput.memory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.Memory.memo_code">
+            <summary>
+            内存料号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.Memory.memo_loc">
+            <summary>
+            内存点位
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.Memory.memo_tf">
+            <summary>
+            内存真假属性(值为true或false)
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.mes.PcbRackBackOutput">
+            <summary>
+            主板投料 后  出参
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.id">
+            <summary>
+            id唯一标识
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Lc.Bht.Model.mes.PcbRackBackOutput.result_flag" -->
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.flow_code">
+            <summary>
+            流程码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.next_stop">
+            <summary>
+            下一站工作点
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.mo_num">
+            <summary>
+            制令单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.wo_num">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.creation_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackBackOutput.updata_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.mes.PcbRackOutput">
+            <summary>
+            主板上料第一次调mes接口出参
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.id">
+            <summary>
+            ID唯一标识
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.result_flag">
+            <summary>
+            OK/NG
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.flow_code">
+            <summary>
+            流程码
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.next_stop">
+            <summary>
+            下一工作站
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.mo_num">
+            <summary>
+            制令单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.wo_num">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.mboard_code">
+            <summary>
+            主板料号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.creation_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.mes.PcbRackOutput.updata_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
         <member name="T:Lc.Bht.Model.View.System.UserMenusVM">
             <summary>
             
@@ -3335,6 +3678,76 @@
         <member name="P:Lc.Bht.Model.View.System.MenuListVM.Children">
             <summary>
             子菜单
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.View.UpperComputer.MemoryHistory">
+            <summary>
+            内存历史数据
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.memo_sn">
+            <summary>
+            内存sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.memo_loc">
+            <summary>
+            内存安装点位
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.memo_code">
+            <summary>
+            内存料号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.result_flag">
+            <summary>
+            OK/NG
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.MemoryHistory.creation_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Model.View.UpperComputer.PcbHistory">
+            <summary>
+            pcb 历史记录
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.tray">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.pro_sn">
+            <summary>
+            主板sn
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.mac_sn">
+            <summary>
+            mac地址
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.result_flag">
+            <summary>
+            OK/NG
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.result_message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:Lc.Bht.Model.View.UpperComputer.PcbHistory.creation_time">
+            <summary>
+            创建时间
             </summary>
         </member>
         <member name="P:Lc.Bht.Model.View.UserSessionVM.UserID">

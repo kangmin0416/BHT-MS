@@ -85,7 +85,7 @@
         </member>
         <member name="T:Lc.Bht.Admin.Controllers.System.AuthController">
             <summary>
-            
+            登录接口
             </summary>
         </member>
         <member name="F:Lc.Bht.Admin.Controllers.System.AuthController._TokenManager">
@@ -97,6 +97,13 @@
             <summary>
             用户接口
             </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.#ctor(Lc.Bht.Interfaces.ISysUsersService,Lc.Bht.Admin.Extensions.TokenManager)">
+            <summary>
+            
+            </summary>
+            <param name="ISysUsersService"></param>
+            <param name="TokenManager"></param>
         </member>
         <member name="M:Lc.Bht.Admin.Controllers.System.AuthController.Code">
             <summary>
@@ -681,49 +688,144 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Lc.Bht.Admin.Controllers.UpperComputer.CPUInstallController">
+            <summary>
+            安装cpu
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.CPUInstallController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.CPUInstallController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.CPUInstallController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Microsoft.Extensions.Logging.ILogger{Lc.Bht.Admin.Controllers.UpperComputer.CPUInstallController})">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="T:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController">
+            <summary>
+            安装内存
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._ppPcb">
+            <summary>
+            主板接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._ppMemory">
+            <summary>
+            内存接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._ppVerifyPass">
+            <summary>
+            验证过站接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController._common">
+            <summary>
+            自定义接口
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Microsoft.Extensions.Logging.ILogger{Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController},Lc.Bht.Interfaces.IPpPcbService,Lc.Bht.Interfaces.IPpMemoryService,Lc.Bht.Interfaces.IPpVerifyPassService,Lc.Bht.Interfaces.CommonService.ICommonService)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+            <param name="logger"></param>
+            <param name="IPpPcbService"></param>
+            <param name="IPpMemoryService"></param>
+            <param name="IPpVerifyPassService"></param>
+            <param name="ICommonService"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController.GetHistory(Lc.Bht.Model.Dto.UpperComputer.HistoryDto)">
+            <summary>
+            获取主板上料的历史记录
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.MemoryInstalledController.ManualInstallationMemory(Lc.Bht.Model.Dto.UpperComputer.ManualInstallationMemoryDto)">
+            <summary>
+            人工安装内存
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
         <member name="T:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController">
             <summary>
+            主板上料
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._common">
+            <summary>
+            自定义接口
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._ppPcb">
+            <summary>
+            主板
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._ppTray">
+            <summary>
+            托盘
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._ppVerifyPass">
+            <summary>
+            主板验证过站
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.#ctor(Lc.Bht.Admin.Extensions.TokenManager,Microsoft.Extensions.Logging.ILogger{Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController},Lc.Bht.Interfaces.CommonService.ICommonService,Lc.Bht.Interfaces.IPpPcbService,Lc.Bht.Interfaces.IPpTrayService,Lc.Bht.Interfaces.IPpVerifyPassService)">
+            <summary>
             
             </summary>
-        </member>
-        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackInput">
-            <summary>
-            第一次调用mes 入参 接口 
-            </summary>
-        </member>
-        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackOutput">
-            <summary>
-            第一次调用mes 出参 接口 
-            </summary>
-        </member>
-        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackBackInput">
-            <summary>
-            第二次调用mes 入参 接口 
-            </summary>
-        </member>
-        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._IPcbRackBackOutput">
-            <summary>
-            第二次调用mes 出参 接口 
-            </summary>
-        </member>
-        <member name="F:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController._cesSoap">
-            <summary>
-            mes webServer服务
-            </summary>
-        </member>
-        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.#ctor(Lc.Bht.Interfaces.IPcbRackInputService,Lc.Bht.Interfaces.IPcbRackOutputService,Lc.Bht.Interfaces.IPcbRackBackInputService,Lc.Bht.Interfaces.IPcbRackBackOutputService,ServiceReference1.cesSoap)">
-            <summary>
-            
-            </summary>
-            <param name="IPcbRackInputService"></param>
-            <param name="IPcbRackOutputService"></param>
-            <param name="IPcbRackBackInputService"></param>
-            <param name="IPcbRackBackOutputService"></param>
-            <param name="cesSoap"></param>
+            <param name="tokenManager"></param>
+            <param name="logger"></param>
+            <param name="ICommonService"></param>
+            <param name="IPpPcbService"></param>
+            <param name="IPpTrayService"></param>
+            <param name="IPpVerifyPassService"></param>
         </member>
         <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.PcbLoadMaterla(Lc.Bht.Model.Dto.UpperComputer.PcbRackInputDto)">
             <summary>
-            
+            主板上料
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lc.Bht.Admin.Controllers.UpperComputer.PcbLoadMaterlalController.GetHistory(Lc.Bht.Model.Dto.UpperComputer.HistoryDto)">
+            <summary>
+            获取主板上料的历史记录
             </summary>
             <param name="parm"></param>
             <returns></returns>
@@ -853,6 +955,35 @@
             <summary>
             删除token
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lc.Bht.Admin.Middleware.RequestMiddleware">
+            <summary>
+            中间件
+            记录请求和响应数据
+            </summary>
+        </member>
+        <member name="F:Lc.Bht.Admin.Middleware.RequestMiddleware.logger">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="T:Lc.Bht.Admin.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Lc.Bht.Admin.Program.Main(System.String[])">
+            <summary>
+            程序入口
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Lc.Bht.Admin.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
             <returns></returns>
         </member>
         <member name="M:Lc.Bht.Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">

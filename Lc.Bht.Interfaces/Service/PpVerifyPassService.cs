@@ -14,10 +14,10 @@ using System;
 
 namespace Lc.Bht.Interfaces
 {
-    public class PcbRackBackInputService : BaseService<PcbRackBackInput>, IPcbRackBackInputService
+    public class PpVerifyPassService : BaseService<PpVerifyPass>, IPpVerifyPassService
     {
 
-        public PcbRackBackInputService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        public PpVerifyPassService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 
